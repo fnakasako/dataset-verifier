@@ -1,30 +1,5 @@
 The Asset Ingestion & Validation CLI 🗂️
 
-This initial project is designed to be a significant first step away from Python scripting and into the world of professional C++ application development. You will build a tangible, useful tool that solves a real-world problem in your future LoRA workflows, all while mastering the foundational C++ toolchain.
-
-Philosophy & Educational Goals
-
-The primary goal here is to shift your mindset from being a user of tools to a builder of tools. In Python, you might write a quick script to check a dataset. In C++, you will build a robust, high-performance, and distributable command-line application.
-
-This project is designed to teach you:
-
-The "Why" of Native Code: You will immediately feel the speed difference between a C++ program that can iterate through tens of thousands of files in a second and an equivalent Python script. This builds an intuitive appreciation for systems programming.
-
-Self-Sufficiency: By the end, you will have a tool you built that you can use for every subsequent project. This creates a powerful feedback loop and sense of ownership.
-
-Professional Workflow: You won't just write code in a single file. You will learn the professional software engineering loop: defining requirements, structuring a project, managing dependencies, compiling, debugging, and testing.
-
-Core Technical Concepts Covered
-
-C++ Standard Library: iostream for printing, string for text manipulation, vector for dynamic arrays, and especially <filesystem> for modern, object-oriented file I/O.
-
-Application Lifecycle: The full cycle from writing .cpp source files to producing a runnable binary.
-
-Build Systems (CMake): Defining executable targets, managing C++ standards (C++17), and—critically—finding and linking against a third-party library.
-
-Dependency Management: Integrating an external library (CLI11) into your project, a universal task in software development.
-
-Debugging (GDB): Learning how to diagnose a program that has crashed or is behaving incorrectly, a non-negotiable skill for C++.
 
 Project Specification
 
@@ -138,18 +113,3 @@ Add Validation Logic: For each file found, check its extension. If it's an image
 
 Generate the Report: After the scan is complete, print the formatted summary statistics to the console.
 
-Debug with GDB: Intentionally introduce a logic error (e.g., mishandle a path string). Compile the code with debug flags (-g in CMake) and use gdb ./dataset-verifier to run your program, set breakpoints in your validation logic, and inspect the state of your variables to find the bug.
-
-Measuring Success & Portfolio Value
-
-You'll know this project is successful when you can point it at a dataset of thousands of images and it provides an accurate report in milliseconds.
-
-When you show this project, you're not just showing a simple program. You're demonstrating that you can:
-
-Architect a Solution: You identified a workflow bottleneck and engineered a robust tool to solve it.
-
-Manage Dependencies: You professionally integrated a third-party library into a compiled application.
-
-Write Performant Code: You can articulate why this C++ tool is fundamentally more efficient than a script for this I/O-bound task.
-
-This project becomes the first entry in your portfolio, telling a clear story: "I build my own high-performance tools."
