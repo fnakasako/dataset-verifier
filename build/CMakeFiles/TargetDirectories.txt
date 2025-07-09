@@ -1,0 +1,3 @@
+/Users/frank/Desktop/company/dataset-verifier/dataset-verifier/build/CMakeFiles/dataset_verifier.dir
+/Users/frank/Desktop/company/dataset-verifier/dataset-verifier/build/CMakeFiles/edit_cache.dir
+/Users/frank/Desktop/company/dataset-verifier/dataset-verifier/build/CMakeFiles/rebuild_cache.dir
