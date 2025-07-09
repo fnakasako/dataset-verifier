@@ -9,6 +9,7 @@ Verifier::Verifier(const std::string& path, bool is_recursive) {
     this->recursive = is_recursive;
     this->valid_pairs = 0;
     this->orphan_images = 0;
+    this->directories_scanned = 0;
 }
 
 
@@ -35,11 +36,19 @@ void Verifier::scan() {
     // The scan now uses the member variables set in the constructor.
     if (this->recursive) {
         for (const auto& entry : std::filesystem::recursive_directory_iterator(this->start_path)) {
-            process_entry(entry);
+            if (entry.is_directory()) {
+                this->directories_scanned++;
+            } else if (entry.is_regular_file()) {
+                process_file(entry);
+            }
         }
     } else {
         for (const auto& entry : std::filesystem::directory_iterator(this->start_path)) {
-            process_entry(entry);
+             if (entry.is_directory()) {
+                this->directories_scanned++;
+            } else if (entry.is_regular_file()) {
+                process_file(entry);
+            }
         }
     }
 }
